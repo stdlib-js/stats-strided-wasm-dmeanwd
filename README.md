@@ -35,32 +35,20 @@ limitations under the License.
 
 > Compute the [arithmetic mean][arithmetic-mean] of a double-precision floating-point strided array using Welford's algorithm.
 
-<section class="installation">
 
-## Installation
-
-```bash
-npm install @stdlib/stats-strided-wasm-dmeanwd
-```
-
-Alternatively,
-
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
--   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
-
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
-
-To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
-
-</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-var dmeanwd = require( '@stdlib/stats-strided-wasm-dmeanwd' );
+import dmeanwd from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-strided-wasm-dmeanwd@esm/index.mjs';
+```
+
+You can also import the following named exports from the package:
+
+```javascript
+import { Module } from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-strided-wasm-dmeanwd@esm/index.mjs';
 ```
 
 #### dmeanwd.main( N, x, strideX )
@@ -68,7 +56,7 @@ var dmeanwd = require( '@stdlib/stats-strided-wasm-dmeanwd' );
 Computes the [arithmetic mean][arithmetic-mean] of a double-precision floating-point strided array using Welford's algorithm.
 
 ```javascript
-var Float64Array = require( '@stdlib/array-float64' );
+import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@esm/index.mjs';
 
 var x = new Float64Array( [ 1.0, -2.0, 2.0 ] );
 
@@ -85,7 +73,7 @@ The function has the following parameters:
 The `N` and stride parameters determine which elements in the strided array are accessed at runtime. For example, to access every other element in `x`,
 
 ```javascript
-var Float64Array = require( '@stdlib/array-float64' );
+import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@esm/index.mjs';
 
 var x = new Float64Array( [ 1.0, 2.0, 2.0, -7.0, -2.0, 3.0, 4.0, 2.0 ] );
 
@@ -98,7 +86,7 @@ Note that indexing is relative to the first index. To introduce an offset, use [
 <!-- eslint-disable stdlib/capitalized-comments -->
 
 ```javascript
-var Float64Array = require( '@stdlib/array-float64' );
+import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@esm/index.mjs';
 
 var x0 = new Float64Array( [ 2.0, 1.0, 2.0, -2.0, -2.0, 2.0, 3.0, 4.0 ] );
 var x1 = new Float64Array( x0.buffer, x0.BYTES_PER_ELEMENT*1 ); // start at 2nd element
@@ -112,7 +100,7 @@ var y = dmeanwd.main( 4, x1, 2 );
 Computes the [arithmetic mean][arithmetic-mean] of a double-precision floating-point strided array using Welford's algorithm and alternative indexing semantics.
 
 ```javascript
-var Float64Array = require( '@stdlib/array-float64' );
+import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@esm/index.mjs';
 
 var x = new Float64Array( [ 1.0, -2.0, 2.0 ] );
 
@@ -127,7 +115,7 @@ The function has the following additional parameters:
 While [`typed array`][mdn-typed-array] views mandate a view offset based on the underlying buffer, the offset parameter supports indexing semantics based on a starting index. For example, to access every other element starting from the second element:
 
 ```javascript
-var Float64Array = require( '@stdlib/array-float64' );
+import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@esm/index.mjs';
 
 var x = new Float64Array( [ 2.0, 1.0, 2.0, -2.0, -2.0, 2.0, 3.0, 4.0 ] );
 
@@ -146,7 +134,7 @@ Returns a new WebAssembly [module wrapper][@stdlib/wasm/module-wrapper] instance
 <!-- eslint-disable node/no-sync -->
 
 ```javascript
-var Memory = require( '@stdlib/wasm-memory' );
+import Memory from 'https://cdn.jsdelivr.net/gh/stdlib-js/wasm-memory@esm/index.mjs';
 
 // Create a new memory instance with an initial size of 10 pages (640KiB) and a maximum size of 100 pages (6.4MiB):
 var mem = new Memory({
@@ -169,9 +157,9 @@ Computes the [arithmetic mean][arithmetic-mean] of a double-precision floating-p
 <!-- eslint-disable node/no-sync -->
 
 ```javascript
-var Memory = require( '@stdlib/wasm-memory' );
-var oneTo = require( '@stdlib/array-one-to' );
-var zeros = require( '@stdlib/array-zeros' );
+import Memory from 'https://cdn.jsdelivr.net/gh/stdlib-js/wasm-memory@esm/index.mjs';
+import oneTo from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-one-to@esm/index.mjs';
+import zeros from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-zeros@esm/index.mjs';
 
 // Create a new memory instance with an initial size of 10 pages (640KiB) and a maximum size of 100 pages (6.4MiB):
 var mem = new Memory({
@@ -216,9 +204,9 @@ Computes the [arithmetic mean][arithmetic-mean] of a double-precision floating-p
 <!-- eslint-disable node/no-sync -->
 
 ```javascript
-var Memory = require( '@stdlib/wasm-memory' );
-var oneTo = require( '@stdlib/array-one-to' );
-var zeros = require( '@stdlib/array-zeros' );
+import Memory from 'https://cdn.jsdelivr.net/gh/stdlib-js/wasm-memory@esm/index.mjs';
+import oneTo from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-one-to@esm/index.mjs';
+import zeros from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-zeros@esm/index.mjs';
 
 // Create a new memory instance with an initial size of 10 pages (640KiB) and a maximum size of 100 pages (6.4MiB):
 var mem = new Memory({
@@ -279,9 +267,14 @@ The function has the following additional parameters:
 
 <!-- eslint no-undef: "error" -->
 
-```javascript
-var discreteUniform = require( '@stdlib/random-array-discrete-uniform' );
-var dmeanwd = require( '@stdlib/stats-strided-wasm-dmeanwd' );
+```html
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<script type="module">
+
+import discreteUniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-discrete-uniform@esm/index.mjs';
+import dmeanwd from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-strided-wasm-dmeanwd@esm/index.mjs';
 
 var opts = {
     'dtype': 'float64'
@@ -291,6 +284,10 @@ console.log( x );
 
 var y = dmeanwd.ndarray( x.length, x, 1, 0 );
 console.log( y );
+
+</script>
+</body>
+</html>
 ```
 
 </section>
@@ -314,7 +311,7 @@ console.log( y );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -379,15 +376,15 @@ Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
 
 [arithmetic-mean]: https://en.wikipedia.org/wiki/Arithmetic_mean
 
-[@stdlib/array/float64]: https://github.com/stdlib-js/array-float64
+[@stdlib/array/float64]: https://github.com/stdlib-js/array-float64/tree/esm
 
 [mdn-typed-array]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray
 
-[@stdlib/wasm/memory]: https://github.com/stdlib-js/wasm-memory
+[@stdlib/wasm/memory]: https://github.com/stdlib-js/wasm-memory/tree/esm
 
-[@stdlib/wasm/module-wrapper]: https://github.com/stdlib-js/wasm-module-wrapper
+[@stdlib/wasm/module-wrapper]: https://github.com/stdlib-js/wasm-module-wrapper/tree/esm
 
-[@stdlib/stats/strided/dmeanwd]: https://github.com/stdlib-js/stats-strided-dmeanwd
+[@stdlib/stats/strided/dmeanwd]: https://github.com/stdlib-js/stats-strided-dmeanwd/tree/esm
 
 <!-- </related-links> -->
 
