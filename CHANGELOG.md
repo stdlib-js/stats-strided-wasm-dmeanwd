@@ -22,6 +22,7 @@
 
 <details>
 
+-   [`eb4ee39`](https://github.com/stdlib-js/stdlib/commit/eb4ee397ee785010d2f85edc22de34775869f036) - **chore:** update comments [(#7203)](https://github.com/stdlib-js/stdlib/pull/7203) _(by Prashant Kumar Yadav, Athan Reines)_
 -   [`a889189`](https://github.com/stdlib-js/stdlib/commit/a889189e1a7d22e0f435bb0da3371eee73fb665d) - **feat:** add `stats/strided/wasm/dmeanwd` [(#7188)](https://github.com/stdlib-js/stdlib/pull/7188) _(by Prashant Kumar Yadav, Athan Reines)_
 
 </details>
