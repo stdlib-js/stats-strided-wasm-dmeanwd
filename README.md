@@ -171,7 +171,6 @@ Computes the [arithmetic mean][arithmetic-mean] of a double-precision floating-p
 ```javascript
 var Memory = require( '@stdlib/wasm-memory' );
 var oneTo = require( '@stdlib/array-one-to' );
-var zeros = require( '@stdlib/array-zeros' );
 
 // Create a new memory instance with an initial size of 10 pages (640KiB) and a maximum size of 100 pages (6.4MiB):
 var mem = new Memory({
@@ -209,7 +208,7 @@ The function has the following parameters:
 -   **xp**: input [`Float64Array`][@stdlib/array/float64] pointer (i.e., byte offset).
 -   **sx**: stride length for `x`.
 
-#### dmeanwd.Module.prototype.ndarray( N, alpha, xp, sx, ox )
+#### dmeanwd.Module.prototype.ndarray( N, xp, sx, ox )
 
 Computes the [arithmetic mean][arithmetic-mean] of a double-precision floating-point strided array using Welford's algorithm and alternative indexing semantics.
 
@@ -218,7 +217,6 @@ Computes the [arithmetic mean][arithmetic-mean] of a double-precision floating-p
 ```javascript
 var Memory = require( '@stdlib/wasm-memory' );
 var oneTo = require( '@stdlib/array-one-to' );
-var zeros = require( '@stdlib/array-zeros' );
 
 // Create a new memory instance with an initial size of 10 pages (640KiB) and a maximum size of 100 pages (6.4MiB):
 var mem = new Memory({
@@ -388,8 +386,6 @@ Copyright &copy; 2016-2026. The Stdlib [Authors][stdlib-authors].
 [@stdlib/wasm/module-wrapper]: https://github.com/stdlib-js/wasm-module-wrapper
 
 [@stdlib/stats/strided/dmeanwd]: https://github.com/stdlib-js/stats-strided-dmeanwd
-
-<!-- </related-links> -->
 
 </section>
 
