@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-09-27)
+## Unreleased (2026-11-13)
 
 <section class="commits">
 
@@ -12,6 +12,7 @@
 
 <details>
 
+-   [`7349dff`](https://github.com/stdlib-js/stdlib/commit/7349dffeddd90289879f06e70acc1be8544af75b) - **style:** add missing whitespace [(#16507)](https://github.com/stdlib-js/stdlib/pull/16507) _(by Philipp Burckhardt)_
 -   [`7feb753`](https://github.com/stdlib-js/stdlib/commit/7feb7539aa2ec7163fa03b05fb106b7ef3360a89) - **build:** add scripts for inserting license headers [(#13484)](https://github.com/stdlib-js/stdlib/pull/13484) _(by Prashant Kumar Yadav)_
 -   [`7cd8d40`](https://github.com/stdlib-js/stdlib/commit/7cd8d404db9167dbf1cb1dec2a3eb59c246717dd) - **docs:** remove unused imports in examples [(#13448)](https://github.com/stdlib-js/stdlib/pull/13448) _(by Prashant Kumar Yadav)_
 -   [`598648b`](https://github.com/stdlib-js/stdlib/commit/598648bcc2fa82a3454f257bd65c8c40c0161926) - **docs:** fix ndarray function signatures [(#13443)](https://github.com/stdlib-js/stdlib/pull/13443) _(by Prashant Kumar Yadav)_
